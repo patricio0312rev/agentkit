@@ -4,7 +4,7 @@
 
 AgentKit is a CLI tool that helps you set up specialized AI agents for your development workflow. Get 42 pre-built agents across 7 departments—from engineering and design to marketing and testing—all optimized for rapid app development.
 
-[![npm version](https://img.shields.io/npm/v/agentkit.svg)](https://www.npmjs.com/package/agentkit)
+[![npm version](https://img.shields.io/npm/v/@patricio0312rev/agentkit.svg)](https://www.npmjs.com/package/@patricio0312rev/agentkit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
