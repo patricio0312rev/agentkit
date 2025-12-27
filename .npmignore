@@ -1,0 +1,42 @@
+# Development files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Test files
+test/
+tests/
+*.test.js
+*.spec.js
+coverage/
+
+# Documentation
+docs/
+examples/
+.github/
+
+# Config files
+.eslintrc*
+.prettierrc*
+.editorconfig
+.gitignore
+
+# Scripts
+scripts/
+
+# Logs
+*.log
+
+# Lock files (let users generate their own)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment
+.env*
+
+# Temporary
+tmp/
+temp/
