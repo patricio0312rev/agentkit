@@ -40,3 +40,9 @@ pnpm-lock.yaml
 # Temporary
 tmp/
 temp/
+
+# Testing output from running agentkit init
+.cursorrules/
+.claude/
+.ai/
+.aider/

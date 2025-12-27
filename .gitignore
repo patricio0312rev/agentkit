@@ -28,8 +28,8 @@ coverage/
 *.swo
 *~
 .idea/
-*.sublime-workspace
-*.sublime-project
+.sublime-workspace
+.sublime-project
 
 # OS
 .DS_Store
@@ -57,6 +57,13 @@ out/
 tmp/
 temp/
 *.tmp
+
+# Testing output from running agentkit init
+.cursorrules/
+.claude/
+.ai/
+.aider/
+.github/copilot-instructions.md
 
 # Misc
 *.pid
