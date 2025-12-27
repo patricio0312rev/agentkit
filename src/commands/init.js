@@ -1,15 +1,9 @@
 const inquirer = require("inquirer");
 const chalk = require("chalk");
 const ora = require("ora");
-const path = require("path");
 const { generateAgents } = require("../lib/generator");
 const { TOOLS, DEPARTMENTS } = require("../lib/config");
-const {
-  displaySuccess,
-  displayError,
-  displayBox,
-  displayInfo,
-} = require("../utils/display");
+const { displayError, displayBox } = require("../utils/display");
 
 async function initCommand(options) {
   console.log(chalk.cyan("\n🚀 Let's set up your AI agents!\n"));
@@ -56,8 +50,7 @@ function buildConfigFromFlags(options) {
     agents: options.agents
       ? options.agents.split(",").map((a) => a.trim())
       : [],
-    stack: options.stack ? options.stack.split(",").map((s) => s.trim()) : [],
-    skipExamples: options.skipExamples || false,
+    stack: [], // Removed for v0.1.0
   };
 }
 
@@ -78,7 +71,7 @@ async function promptUser(options) {
         name: "tool",
         message: "Which AI tool are you using?",
         choices: toolChoices,
-        default: "claude-code",
+        default: "cursor",
       },
     ]);
     answers.tool = toolAnswer.tool;
@@ -137,84 +130,50 @@ async function promptUser(options) {
     answers.departments = options.departments.split(",").map((d) => d.trim());
   }
 
-  // Step 4: Count total agents
-  const totalAgents = answers.departments.reduce((sum, dept) => {
-    return sum + (DEPARTMENTS[dept]?.agents.length || 0);
-  }, 0);
+  // Step 4: Select specific agents per department
+  answers.agents = [];
 
+  if (!options.agents) {
+    console.log(chalk.cyan("\n📋 Select agents for each department:\n"));
+
+    for (const dept of answers.departments) {
+      const deptInfo = DEPARTMENTS[dept];
+
+      const agentChoices = deptInfo.agents.map((agent) => ({
+        name: agent,
+        value: `${dept}/${agent}`,
+        checked: true, // All selected by default
+      }));
+
+      const agentAnswer = await inquirer.prompt([
+        {
+          type: "checkbox",
+          name: "selectedAgents",
+          message: `${chalk.bold(deptInfo.name)} agents:`,
+          choices: agentChoices,
+          pageSize: 15,
+          validate: (input) => {
+            if (input.length === 0) {
+              return `Please select at least one agent from ${deptInfo.name} (or deselect the department)`;
+            }
+            return true;
+          },
+        },
+      ]);
+
+      answers.agents.push(...agentAnswer.selectedAgents);
+    }
+  } else {
+    answers.agents = options.agents.split(",").map((a) => a.trim());
+  }
+
+  // Count total agents selected
+  const totalAgents = answers.agents.length;
   console.log(
     chalk.dim(`\n  → Total agents selected: ${chalk.bold(totalAgents)}\n`)
   );
 
-  // Step 5: Optional - Select specific agents (if many selected)
-  if (!options.agents && totalAgents > 15) {
-    const customizeAnswer = await inquirer.prompt([
-      {
-        type: "confirm",
-        name: "customize",
-        message: `Would you like to customize which agents to include?`,
-        default: false,
-      },
-    ]);
-
-    if (customizeAnswer.customize) {
-      const agentChoices = [];
-      answers.departments.forEach((dept) => {
-        const deptInfo = DEPARTMENTS[dept];
-        agentChoices.push(
-          new inquirer.Separator(chalk.cyan(`\n── ${deptInfo.name} ──`))
-        );
-        deptInfo.agents.forEach((agent) => {
-          agentChoices.push({
-            name: `  ${agent}`,
-            value: `${dept}/${agent}`,
-            checked: true,
-          });
-        });
-      });
-
-      const agentsAnswer = await inquirer.prompt([
-        {
-          type: "checkbox",
-          name: "agents",
-          message: "Select specific agents:",
-          choices: agentChoices,
-          pageSize: 20,
-        },
-      ]);
-
-      // Parse department/agent format
-      answers.agents = agentsAnswer.agents;
-    } else {
-      answers.agents = [];
-    }
-  } else {
-    answers.agents = options.agents
-      ? options.agents.split(",").map((a) => a.trim())
-      : [];
-  }
-
-  // Step 6: Tech stack (optional)
-  if (!options.stack) {
-    const stackAnswer = await inquirer.prompt([
-      {
-        type: "input",
-        name: "stack",
-        message: "Tech stack (comma-separated, optional):",
-        default: "",
-        filter: (input) =>
-          input.trim() === ""
-            ? []
-            : input.split(",").map((s) => s.trim().toLowerCase()),
-      },
-    ]);
-    answers.stack = stackAnswer.stack;
-  } else {
-    answers.stack = options.stack.split(",").map((s) => s.trim().toLowerCase());
-  }
-
-  // Step 7: Skip examples
-  answers.skipExamples = options.skipExamples || false;
+  answers.stack = []; // Removed for v0.1.0
 
   return answers;
 }
@@ -324,6 +283,11 @@ function getUsageInstructions(tool) {
       `Instructions are in .github/copilot-instructions.md\n` +
       `Copilot will automatically use them.`,
 
+    aider:
+      `With Aider:\n` +
+      `Conventions are in .aider/conventions.md\n` +
+      `Aider will use them automatically.`,
+
     universal:
       `With any AI tool:\n` +
       `Upload relevant agent .md files to your AI chat\n` +
@@ -338,6 +302,7 @@ function getToolSpecificNextStep(tool) {
     "claude-code": "Start coding: " + chalk.green('claude-code "your task"'),
     cursor: "Open Cursor and use @-mentions",
     copilot: "Start coding - Copilot will use the instructions",
+    aider: "Start coding: " + chalk.green("aider --read .aider/"),
     universal: "Open your AI tool and upload the agent files",
   };
 
