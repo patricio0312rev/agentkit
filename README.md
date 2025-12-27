@@ -24,7 +24,7 @@ AgentKit is a CLI tool that helps you set up specialized AI agents for your deve
 
 ```bash
 # Install globally
-npm install -g agentkit
+npm install -g @patricio0312rev/agentkit
 
 # Or use directly with npx
 npx agentkit init
@@ -185,35 +185,6 @@ Copilot automatically uses `.github/copilot-instructions.md` for all suggestions
 
 ---
 
-## 🔧 Configuration Options
-
-```bash
-agentkit init [options]
-
-Options:
-  -t, --tool <tool>           AI tool (claude-code, cursor, copilot, aider, universal)
-  -f, --folder <name>         Custom folder name
-  -d, --departments <list>    Comma-separated list of departments
-  --agents <list>             Comma-separated list of specific agents
-  --skip-prompts              Skip all interactive prompts (requires all flags)
-  -h, --help                  Display help for command
-```
-
-**Examples:**
-
-```bash
-# Full engineering department
-agentkit init -t cursor -d engineering --skip-prompts
-
-# Specific agents only
-agentkit init -t cursor -d engineering --agents backend-architect,frontend-developer --skip-prompts
-
-# Multiple departments
-agentkit init -t claude-code -d engineering,design,marketing --skip-prompts
-```
-
----
-
 ## 📚 Documentation
 
 Each generated agent includes:
@@ -335,8 +306,8 @@ agentkit init \
 
 ```bash
 # If installed globally, try:
-npm uninstall -g agentkit
-npm install -g agentkit
+npm uninstall -g @patricio0312rev/agentkit
+npm install -g @patricio0312rev/agentkit
 
 # Or use npx:
 npx agentkit init
@@ -351,7 +322,7 @@ npx agentkit init
 **3. Permission errors during installation**
 
 ```bash
-sudo npm install -g agentkit
+sudo npm install -g @patricio0312rev/agentkit
 # Or use npx to avoid global install
 ```
 
