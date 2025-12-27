@@ -1,0 +1,53 @@
+{
+  "name": "agentkit",
+  "version": "0.1.0",
+  "description": "CLI tool to scaffold AI agent configurations for Claude Code, Cursor, and other AI coding assistants",
+  "main": "src/index.js",
+  "bin": {
+    "agentkit": "./bin/cli.js",
+    "ak": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "echo 'Ready to publish agentkit!'"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "claude",
+    "cursor",
+    "copilot",
+    "claude-code",
+    "ai-agents",
+    "cli",
+    "scaffolding",
+    "sub-agents",
+    "ai-tools",
+    "agentkit"
+  ],
+  "author": "Patricio Marroquin <patricio0312rev@github>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patricio0312rev/agentkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/patricio0312rev/agentkit/issues"
+  },
+  "homepage": "https://github.com/patricio0312rev/agentkit#readme",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1"
+  }
+}
