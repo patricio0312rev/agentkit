@@ -1,7 +1,7 @@
 const TOOLS = {
     'claude-code': {
       name: 'Claude Code',
-      folder: '.claude',
+      folder: '.claude/agents',
       description: 'Sub-agents with native support',
       fileStructure: 'multi-file',
       supportsSubAgents: true

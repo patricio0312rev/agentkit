@@ -1,8 +1,8 @@
-const fs = require('fs-extra');
-const path = require('path');
-const { TOOLS, DEPARTMENTS } = require('./config');
-const { generateReadme } = require('../utils/readme');
-const { generateToolSpecificFiles } = require('../utils/tool-specific');
+const fs = require("fs-extra");
+const path = require("path");
+const { TOOLS, DEPARTMENTS } = require("./config");
+const { generateReadme } = require("../utils/readme");
+const { generateToolSpecificFiles } = require("../utils/tool-specific");
 
 /**
  * Main generator function that creates AI agent configuration
@@ -16,7 +16,7 @@ async function generateAgents(config) {
     targetDir,
     agentsGenerated: 0,
     filesCreated: [],
-    errors: []
+    errors: [],
   };
 
   try {
@@ -29,18 +29,21 @@ async function generateAgents(config) {
     result.filesCreated.push(...agentResult.files);
 
     // Generate README
-    const readmePath = path.join(targetDir, 'README.md');
+    const readmePath = path.join(targetDir, "README.md");
     const readmeContent = generateReadme(config, result);
     await fs.writeFile(readmePath, readmeContent);
     result.filesCreated.push(readmePath);
 
     // Generate tool-specific files (e.g., .cursorrules, copilot-instructions.md)
-    const toolFiles = await generateToolSpecificFiles(config, targetDir, agentResult.agentsList);
+    const toolFiles = await generateToolSpecificFiles(
+      config,
+      targetDir,
+      agentResult.agentsList
+    );
     result.filesCreated.push(...toolFiles);
 
     result.success = true;
     return result;
-
   } catch (error) {
     result.errors.push(error.message);
     throw error;
@@ -58,22 +61,28 @@ async function generateDepartmentAgents(config, targetDir) {
   const files = [];
   const agentsList = [];
 
+  // For Claude Code, agents go directly in .claude/agents, not in department subfolders
+  const isClaudeCode = config.tool === "claude-code";
+
   for (const dept of config.departments) {
     const deptInfo = DEPARTMENTS[dept];
     if (!deptInfo) continue;
 
-    const deptDir = path.join(targetDir, dept);
+    // Only create department subdirectories for non-Claude Code tools
+    const deptDir = isClaudeCode ? targetDir : path.join(targetDir, dept);
     await fs.ensureDir(deptDir);
 
     // Determine which agents to generate
     let agentsToGenerate = deptInfo.agents;
-    
+
     // Filter if specific agents were selected
     if (config.agents && config.agents.length > 0) {
-      agentsToGenerate = agentsToGenerate.filter(agent => {
+      agentsToGenerate = agentsToGenerate.filter((agent) => {
         // Support both "agent-name" and "dept/agent-name" formats
-        return config.agents.includes(agent) || 
-               config.agents.includes(`${dept}/${agent}`);
+        return (
+          config.agents.includes(agent) ||
+          config.agents.includes(`${dept}/${agent}`)
+        );
       });
     }
 
@@ -100,13 +109,18 @@ async function generateDepartmentAgents(config, targetDir) {
  * @returns {Promise<string|null>} Path to created file or null
  */
 async function generateAgentFile(dept, agent, deptDir, config) {
-  const sourceFile = path.join(__dirname, '../../templates/departments', dept, `${agent}.md`);
+  const sourceFile = path.join(
+    __dirname,
+    "../../templates/departments",
+    dept,
+    `${agent}.md`
+  );
   const targetFile = path.join(deptDir, `${agent}.md`);
 
   try {
     // Check if template exists
     if (await fs.pathExists(sourceFile)) {
-      let content = await fs.readFile(sourceFile, 'utf8');
+      let content = await fs.readFile(sourceFile, "utf8");
 
       // Process content based on config
       content = processAgentContent(content, config);
@@ -115,7 +129,7 @@ async function generateAgentFile(dept, agent, deptDir, config) {
       return targetFile;
     } else {
       // Generate basic template if source doesn't exist
-      const basicTemplate = generateBasicAgentTemplate(dept, agent);
+      const basicTemplate = generateBasicAgentTemplate(dept, agent, config);
       await fs.writeFile(targetFile, basicTemplate);
       return targetFile;
     }
@@ -134,17 +148,33 @@ async function generateAgentFile(dept, agent, deptDir, config) {
 function processAgentContent(content, config) {
   let processed = content;
 
+  // Add model field to frontmatter for Claude Code agents
+  if (config.tool === "claude-code" && config.model) {
+    const frontmatterMatch = processed.match(/^---\n([\s\S]*?)\n---/);
+    if (frontmatterMatch) {
+      const frontmatterContent = frontmatterMatch[1];
+      const updatedFrontmatter = frontmatterContent.replace(
+        /(tools:.*?)(\n)/,
+        `$1$2model: ${config.model}$2`
+      );
+      processed = processed.replace(
+        /^---\n[\s\S]*?\n---/,
+        `---\n${updatedFrontmatter}\n---`
+      );
+    }
+  }
+
   // Remove examples if requested
   if (config.skipExamples) {
     // Remove content between <example> tags
-    processed = processed.replace(/<example>[\s\S]*?<\/example>/g, '');
+    processed = processed.replace(/<example>[\s\S]*?<\/example>/g, "");
     // Clean up extra whitespace
-    processed = processed.replace(/\n{3,}/g, '\n\n');
+    processed = processed.replace(/\n{3,}/g, "\n\n");
   }
 
   // Add tech stack information if provided
   if (config.stack && config.stack.length > 0) {
-    const stackSection = `\n\n## Tech Stack Context\n\nThis project uses: ${config.stack.join(', ')}\n`;
+    const stackSection = `\n\n## Tech Stack Context\n\nThis project uses: ${config.stack.join(", ")}\n`;
     // Insert before the main content or at the end
     processed += stackSection;
   }
@@ -156,19 +186,27 @@ function processAgentContent(content, config) {
  * Generate a basic agent template when source file doesn't exist
  * @param {string} dept - Department name
  * @param {string} agent - Agent name
+ * @param {Object} config - Configuration object
  * @returns {string} Basic template content
  */
-function generateBasicAgentTemplate(dept, agent) {
+function generateBasicAgentTemplate(dept, agent, config) {
   const deptInfo = DEPARTMENTS[dept];
+  const modelLine =
+    config.tool === "claude-code" && config.model
+      ? `\nmodel: ${config.model}`
+      : "";
   return `<!-- ${dept}/${agent}.md -->
 ---
 name: ${agent}
 description: AI agent for ${deptInfo.name}
 color: blue
-tools: Read, Write, MultiEdit
+tools: Read, Write, MultiEdit${modelLine}
 ---
 
-# ${agent.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+# ${agent
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ")}
 
 This is a placeholder agent file. Please add specific instructions and responsibilities.
 
@@ -189,5 +227,5 @@ This is a placeholder agent file. Please add specific instructions and responsib
 module.exports = {
   generateAgents,
   generateDepartmentAgents,
-  generateAgentFile
+  generateAgentFile,
 };

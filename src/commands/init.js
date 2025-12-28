@@ -50,7 +50,8 @@ function buildConfigFromFlags(options) {
     agents: options.agents
       ? options.agents.split(",").map((a) => a.trim())
       : [],
-    stack: [], // Removed for v0.1.0
+    model: options.model === "inherit" ? undefined : options.model,
+    stack: [],
   };
 }
 
@@ -100,6 +101,46 @@ async function promptUser(options) {
     answers.folder = folderAnswer.folder;
   } else {
     answers.folder = options.folder;
+  }
+
+  // Step 2.5: Model selection for Claude Code
+  if (answers.tool === "claude-code" && !options.model) {
+    const modelChoices = [
+      {
+        name: `${chalk.bold("Sonnet")} ${chalk.gray("→")} ${chalk.dim("Balanced performance - best for most agents")}`,
+        value: "sonnet",
+        short: "Sonnet",
+      },
+      {
+        name: `${chalk.bold("Opus")} ${chalk.gray("→")} ${chalk.dim("Most capable for complex reasoning tasks")}`,
+        value: "opus",
+        short: "Opus",
+      },
+      {
+        name: `${chalk.bold("Haiku")} ${chalk.gray("→")} ${chalk.dim("Fast and efficient for simple tasks")}`,
+        value: "haiku",
+        short: "Haiku",
+      },
+      {
+        name: `${chalk.bold("Inherit from parent")} ${chalk.gray("→")} ${chalk.dim("Use the same model as the main conversation")}`,
+        value: "inherit",
+        short: "Inherit from parent",
+      },
+    ];
+
+    const modelAnswer = await inquirer.prompt([
+      {
+        type: "list",
+        name: "model",
+        message: "Select model for agents:",
+        choices: modelChoices,
+        default: "sonnet",
+      },
+    ]);
+    answers.model =
+      modelAnswer.model === "inherit" ? undefined : modelAnswer.model;
+  } else if (options.model) {
+    answers.model = options.model === "inherit" ? undefined : options.model;
   }
 
   // Step 3: Select departments
