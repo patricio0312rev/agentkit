@@ -92,8 +92,8 @@ async function promptUser(options) {
         validate: (input) => {
           if (!input.trim()) return "Folder name cannot be empty";
           if (input.includes(" ")) return "Folder name cannot contain spaces";
-          if (input.includes("\\") || input.includes("/"))
-            return "Folder name cannot contain path separators";
+          if (input.includes("\\"))
+            return "Folder name cannot contain backslashes";
           return true;
         },
       },
