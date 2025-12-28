@@ -24,6 +24,10 @@ program
     "AI tool (claude-code, cursor, copilot, aider, universal)"
   )
   .option("-f, --folder <name>", "Custom folder name")
+  .option(
+    "-m, --model <model>",
+    "Model for Claude Code agents (sonnet, opus, haiku, inherit)"
+  )
   .option("-d, --departments <list>", "Comma-separated list of departments")
   .option("--agents <list>", "Comma-separated list of specific agents")
   .option(
