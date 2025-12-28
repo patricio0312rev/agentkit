@@ -153,9 +153,10 @@ function processAgentContent(content, config) {
     const frontmatterMatch = processed.match(/^---\n([\s\S]*?)\n---/);
     if (frontmatterMatch) {
       const frontmatterContent = frontmatterMatch[1];
+
       const updatedFrontmatter = frontmatterContent.replace(
-        /(tools:.*?)(\n)/,
-        `$1$2model: ${config.model}$2`
+        /(tools:.*?)($|\n)/,
+        `$1\nmodel: ${config.model}$2`
       );
       processed = processed.replace(
         /^---\n[\s\S]*?\n---/,
