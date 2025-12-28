@@ -1,7 +1,7 @@
 {
   "name": "@patricio0312rev/agentkit",
   "displayName": "AgentKit",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "CLI tool to scaffold AI agent configurations for Claude Code, Cursor, and other AI coding assistants",
   "main": "src/index.js",
   "bin": {
