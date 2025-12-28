@@ -8,15 +8,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Model selection for Claude Code agents (sonnet, opus, haiku, or inherit from parent)
-- Direct agent placement in `.claude/agents` folder (no department subfolders)
-- Automated GitHub Actions workflow for npm publishing
+- N/A
 
 ### Changed
-- Claude Code folder path changed from `.claude` to `.claude/agents`
+- N/A
 
 ### Fixed
 - N/A
+
+## [0.2.0] - 2025-12-28
+
+### Added
+- Model selection for Claude Code agents (sonnet, opus, haiku, or inherit from parent)
+- Interactive model selection prompt when choosing Claude Code tool
+- Automatic model field injection in agent frontmatter
+- Automated GitHub Actions workflow for npm publishing
+- `RELEASE.md` documentation for publishing process
+- `CHANGELOG.md` for tracking version changes
+
+### Changed
+- Claude Code folder structure: agents now placed directly in `.claude/agents` (no department subfolders)
+- Folder path validation now allows forward slashes for nested paths
+- Default folder for Claude Code changed from `.claude` to `.claude/agents`
+
+### Fixed
+- Folder validation rejecting valid paths with forward slashes
+- Model field not being added to agent frontmatter due to regex pattern mismatch
 
 ## [0.1.0] - 2025-12-27
 
