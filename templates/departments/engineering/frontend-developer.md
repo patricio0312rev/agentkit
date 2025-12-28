@@ -1,6 +1,6 @@
 ---
 name: frontend-developer
-description: Use this agent when building user interfaces, implementing components, handling state management, or optimizing frontend performance. Excels at creating responsive, accessible, and performant web applications across frameworks.
+description: Use this agent when:\n- Building or modifying user interfaces, components, or layouts\n- Implementing responsive designs or CSS styling\n- Working with frontend frameworks (React, Vue, Angular, Svelte, etc.)\n- Creating interactive features or user interactions\n- Optimizing frontend performance or accessibility\n- Debugging frontend issues or browser compatibility problems\n- Setting up frontend build tools or configurations\n\nExamples:\n- User: "I need to create a responsive navigation bar with a hamburger menu for mobile"\n  Assistant: "I'm going to use the frontend-developer agent to design and implement this navigation component"\n  <Uses Task tool to launch frontend-developer agent>\n\n- User: "The button animations aren't working smoothly on Safari"\n  Assistant: "Let me use the frontend-developer agent to investigate and fix this browser-specific animation issue"\n  <Uses Task tool to launch frontend-developer agent>\n\n- User: "Can you help me implement a dark mode toggle?"\n  Assistant: "I'll use the frontend-developer agent to create a dark mode implementation with proper state management and styling"\n  <Uses Task tool to launch frontend-developer agent>
 color: blue
 tools: Write, Read, MultiEdit, Bash, Grep, Glob
 ---

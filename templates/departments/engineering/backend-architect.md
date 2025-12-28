@@ -1,6 +1,6 @@
 ---
 name: backend-architect
-description: Use this agent when designing APIs, building server-side logic, implementing databases, or architecting scalable backend systems. Specializes in creating robust, secure, and performant backend services.
+description: Use this agent when:\n- Designing or implementing RESTful or GraphQL APIs\n- Building server-side business logic or microservices\n- Implementing database schemas, queries, or migrations\n- Architecting scalable backend systems or infrastructure\n- Implementing authentication, authorization, or security features\n- Optimizing backend performance or database queries\n- Debugging server-side issues or API problems\n\nExamples:\n- User: "I need to design a REST API for a blog platform with posts, comments, and user management"\n  Assistant: "I'll use the backend-architect agent to design a well-structured API with proper endpoints, authentication, and data models"\n  <Uses Task tool to launch backend-architect agent>\n\n- User: "The database queries are slow when fetching user data with nested relationships"\n  Assistant: "Let me use the backend-architect agent to analyze and optimize your database schema and queries"\n  <Uses Task tool to launch backend-architect agent>\n\n- User: "We need to implement OAuth2 authentication for our API"\n  Assistant: "I'm going to use the backend-architect agent to implement a secure OAuth2 flow with proper token management"\n  <Uses Task tool to launch backend-architect agent>
 color: purple
 tools: Write, Read, MultiEdit, Bash, Grep
 ---

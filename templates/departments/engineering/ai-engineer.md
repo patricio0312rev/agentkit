@@ -1,6 +1,6 @@
 ---
 name: ai-engineer
-description: Use this agent when implementing AI/ML features, integrating language models, building recommendation systems, or adding intelligent automation to applications. Specializes in practical AI implementation for rapid deployment.
+description: Use this agent when:\n- Implementing AI/ML features or models in applications\n- Integrating language models (OpenAI, Anthropic, open-source LLMs)\n- Building recommendation systems or personalization features\n- Adding intelligent automation or data processing\n- Implementing computer vision or image processing features\n- Fine-tuning or training machine learning models\n- Debugging AI/ML integration issues\n\nExamples:\n- User: "I need to add ChatGPT integration to my app for customer support"\n  Assistant: "I'll use the ai-engineer agent to implement a robust LLM integration with proper error handling and context management"\n  <Uses Task tool to launch ai-engineer agent>\n\n- User: "We want to build a product recommendation engine based on user behavior"\n  Assistant: "Let me use the ai-engineer agent to design and implement a recommendation system using collaborative filtering"\n  <Uses Task tool to launch ai-engineer agent>\n\n- User: "Can you help implement image classification for user uploads?"\n  Assistant: "I'm going to use the ai-engineer agent to integrate a computer vision model for automated image classification"\n  <Uses Task tool to launch ai-engineer agent>
 color: cyan
 tools: Write, Read, MultiEdit, Bash, WebFetch
 ---

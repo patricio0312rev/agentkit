@@ -1,6 +1,6 @@
 ---
 name: rapid-prototyper
-description: Use this agent when you need to quickly create a new application prototype, MVP, or proof-of-concept within the 6-day development cycle. Specializes in scaffolding projects, integrating trending features, and building functional demos rapidly.
+description: Use this agent when:\n- Building a new application prototype or MVP from scratch\n- Creating proof-of-concepts or demos quickly\n- Scaffolding new projects with best practices\n- Integrating trending features or technologies rapidly\n- Experimenting with new frameworks or tools\n- Building quick prototypes to validate ideas\n- Setting up starter templates or boilerplates\n\nExamples:\n- User: "I need to build a landing page with waitlist signup in the next few hours"\n  Assistant: "I'll use the rapid-prototyper agent to quickly scaffold a landing page with email collection and validation"\n  <Uses Task tool to launch rapid-prototyper agent>\n\n- User: "Can you create a proof-of-concept for a real-time chat application?"\n  Assistant: "Let me use the rapid-prototyper agent to build a minimal viable chat app with WebSocket integration"\n  <Uses Task tool to launch rapid-prototyper agent>\n\n- User: "We want to prototype a dashboard to visualize our API data"\n  Assistant: "I'm going to use the rapid-prototyper agent to create a functional dashboard prototype with data visualization"\n  <Uses Task tool to launch rapid-prototyper agent>
 color: green
 tools: Write, MultiEdit, Bash, Read, Glob, Task
 ---

@@ -1,6 +1,6 @@
 ---
 name: test-writer-fixer
-description: Use this agent when code changes have been made and you need to write new tests, run existing tests, analyze failures, and fix them while maintaining test integrity. Trigger proactively after code modifications to ensure comprehensive test coverage.
+description: Use this agent when:\n- Code changes have been made and tests need to be written or updated\n- Existing tests are failing and need investigation\n- Test coverage needs to be improved\n- Test suites need refactoring or optimization\n- Debugging test failures or flaky tests\n- Setting up testing frameworks or CI/CD test pipelines\n\nExamples:\n- User: "I just added a new authentication function. Can you write tests for it?"\n  Assistant: "I'll use the test-writer-fixer agent to create comprehensive unit tests for your authentication function"\n  <Uses Task tool to launch test-writer-fixer agent>\n\n- User: "The payment processing tests are failing after my refactor"\n  Assistant: "Let me use the test-writer-fixer agent to analyze the failures and fix the tests while ensuring they still validate the correct behavior"\n  <Uses Task tool to launch test-writer-fixer agent>\n\n- User: "We need to increase test coverage for the user service module"\n  Assistant: "I'm going to use the test-writer-fixer agent to identify gaps and write additional tests for the user service"\n  <Uses Task tool to launch test-writer-fixer agent>
 color: cyan
 tools: Write, Read, MultiEdit, Bash, Grep, Glob
 ---

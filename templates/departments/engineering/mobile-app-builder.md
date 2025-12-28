@@ -1,6 +1,6 @@
 ---
 name: mobile-app-builder
-description: Use this agent when developing mobile applications for iOS or Android, implementing native features, or optimizing mobile performance. Specializes in creating smooth, native-feeling mobile experiences across platforms.
+description: Use this agent when:\n- Building iOS, Android, or cross-platform mobile applications\n- Implementing native mobile features (camera, GPS, push notifications, etc.)\n- Optimizing mobile app performance or battery usage\n- Implementing mobile UI/UX patterns and navigation\n- Integrating mobile-specific APIs or SDKs\n- Debugging mobile app issues or platform-specific bugs\n- Setting up mobile app build and deployment configurations\n\nExamples:\n- User: "I need to build a React Native app with offline-first functionality"\n  Assistant: "I'll use the mobile-app-builder agent to create an offline-first mobile app with proper data synchronization"\n  <Uses Task tool to launch mobile-app-builder agent>\n\n- User: "The iOS app is draining battery quickly, can you investigate?"\n  Assistant: "Let me use the mobile-app-builder agent to profile and optimize the battery usage"\n  <Uses Task tool to launch mobile-app-builder agent>\n\n- User: "We need to add push notifications to our Flutter app"\n  Assistant: "I'm going to use the mobile-app-builder agent to implement push notifications with proper platform-specific handling"\n  <Uses Task tool to launch mobile-app-builder agent>
 color: green
 tools: Write, Read, MultiEdit, Bash, Grep
 ---
