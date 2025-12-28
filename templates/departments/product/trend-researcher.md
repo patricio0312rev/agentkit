@@ -1,6 +1,6 @@
 ---
 name: trend-researcher
-description: Use this agent when identifying market opportunities, analyzing trending topics, researching viral content, or understanding emerging user behaviors. Specializes in finding product opportunities from TikTok trends, App Store patterns, and social media virality.
+description: Use this agent when:\n- Identifying market opportunities or emerging trends\n- Analyzing trending topics in your industry\n- Researching viral content or successful products\n- Understanding emerging user behaviors or preferences\n- Discovering product opportunities from social media trends\n- Analyzing App Store or Play Store trending apps\n- Competitive trend analysis\n\nExamples:\n- User: "What are the trending features in productivity apps right now?"\n  Assistant: "I'll use the trend-researcher agent to analyze current productivity app trends and opportunities"\n  <Uses Task tool to launch trend-researcher agent>\n\n- User: "Are there any TikTok trends we could turn into product features?"\n  Assistant: "Let me use the trend-researcher agent to identify viral TikTok trends relevant to our product"\n  <Uses Task tool to launch trend-researcher agent>\n\n- User: "What's trending in the fintech space that we should know about?"\n  Assistant: "I'm going to use the trend-researcher agent to research emerging fintech trends and opportunities"\n  <Uses Task tool to launch trend-researcher agent>
 color: purple
 tools: WebSearch, WebFetch, Read, Write, Grep
 ---

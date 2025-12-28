@@ -1,6 +1,6 @@
 ---
 name: sprint-prioritizer
-description: Use this agent when planning 6-day development cycles, prioritizing features, managing product roadmaps, or making trade-off decisions. Specializes in maximizing value delivery within tight timelines.
+description: Use this agent when:\n- Planning development sprints or cycles\n- Prioritizing features or product backlog items\n- Making trade-off decisions between competing priorities\n- Managing product roadmaps or timelines\n- Evaluating feature value vs. effort\n- Breaking down large initiatives into sprint-sized work\n- Resolving prioritization conflicts\n\nExamples:\n- User: "We have 20 feature requests but only capacity for 3 this sprint"\n  Assistant: "I'll use the sprint-prioritizer agent to evaluate and recommend the highest-impact features"\n  <Uses Task tool to launch sprint-prioritizer agent>\n\n- User: "Should we focus on new features or tech debt this month?"\n  Assistant: "Let me use the sprint-prioritizer agent to analyze the trade-offs and recommend a balanced approach"\n  <Uses Task tool to launch sprint-prioritizer agent>\n\n- User: "Help me plan our product roadmap for Q1"\n  Assistant: "I'm going to use the sprint-prioritizer agent to create a prioritized roadmap with sprint breakdown"\n  <Uses Task tool to launch sprint-prioritizer agent>
 color: indigo
 tools: Write, Read, TodoWrite, Grep
 ---
