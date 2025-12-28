@@ -16,6 +16,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - N/A
 
+## [0.2.2] - 2025-12-28
+
+### Added
+- CLI flag `-m, --model <model>` for specifying Claude Code agent model via command line
+- Documentation for `--model` flag in README configuration options table
+- Usage example showing Claude Code model selection in non-interactive mode
+
+### Changed
+- N/A
+
+### Fixed
+- N/A
+
 ## [0.2.1] - 2025-12-28
 
 ### Added
