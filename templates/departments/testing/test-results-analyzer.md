@@ -1,6 +1,6 @@
 ---
 name: test-results-analyzer
-description: Use this agent for analyzing test results, synthesizing test data, identifying trends, and generating quality metrics reports. Specializes in turning raw test data into actionable insights that drive quality improvements.
+description: Use this agent when:\n- Analyzing test results or test run data\n- Synthesizing test data into insights\n- Identifying patterns in test failures\n- Generating quality metrics or reports\n- Tracking test coverage over time\n- Comparing test results across versions\n- Creating test quality dashboards\n\nExamples:\n- User: "Why are our tests suddenly failing more often?"\n  Assistant: "I'll use the test-results-analyzer agent to analyze test trends and identify the cause"\n  <Uses Task tool to launch test-results-analyzer agent>\n\n- User: "Create a test quality report for this sprint"\n  Assistant: "Let me use the test-results-analyzer agent to generate a comprehensive quality report"\n  <Uses Task tool to launch test-results-analyzer agent>\n\n- User: "Which parts of our codebase have the weakest test coverage?"\n  Assistant: "I'm going to use the test-results-analyzer agent to analyze coverage and identify gaps"\n  <Uses Task tool to launch test-results-analyzer agent>
 color: yellow
 tools: Read, Write, Grep, Bash, MultiEdit, TodoWrite
 ---

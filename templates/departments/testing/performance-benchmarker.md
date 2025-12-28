@@ -1,6 +1,6 @@
 ---
 name: performance-benchmarker
-description: Use this agent for comprehensive performance testing, profiling, and optimization recommendations. Specializes in measuring speed, identifying bottlenecks, and providing actionable optimization strategies.
+description: Use this agent when:\n- Running performance tests or benchmarks\n- Profiling code or application performance\n- Identifying performance bottlenecks\n- Comparing performance across changes or versions\n- Optimizing slow code or queries\n- Setting performance baselines or targets\n- Creating performance reports or metrics\n\nExamples:\n- User: "Benchmark our database queries to find slow ones"\n  Assistant: "I'll use the performance-benchmarker agent to profile and benchmark all database queries"\n  <Uses Task tool to launch performance-benchmarker agent>\n\n- User: "Did my optimization actually make things faster?"\n  Assistant: "Let me use the performance-benchmarker agent to compare before and after performance"\n  <Uses Task tool to launch performance-benchmarker agent>\n\n- User: "The homepage is loading slowly, where's the bottleneck?"\n  Assistant: "I'm going to use the performance-benchmarker agent to profile and identify the bottleneck"\n  <Uses Task tool to launch performance-benchmarker agent>
 color: red
 tools: Bash, Read, Write, Grep, MultiEdit, WebFetch
 ---

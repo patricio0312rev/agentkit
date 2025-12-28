@@ -1,6 +1,6 @@
 ---
 name: api-tester
-description: Use this agent for comprehensive API testing including performance testing, load testing, and contract testing. Specializes in ensuring APIs are robust, performant, and meet specifications before deployment.
+description: Use this agent when:\n- Testing API endpoints or services\n- Performing load or performance testing on APIs\n- Validating API contracts or specifications\n- Testing API authentication or authorization\n- Creating API test suites or automation\n- Debugging API issues or errors\n- Generating API testing documentation\n\nExamples:\n- User: "Test our REST API endpoints for the user service"\n  Assistant: "I'll use the api-tester agent to create comprehensive tests for all user service endpoints"\n  <Uses Task tool to launch api-tester agent>\n\n- User: "Can our API handle 1000 requests per second?"\n  Assistant: "Let me use the api-tester agent to run load tests and identify performance limits"\n  <Uses Task tool to launch api-tester agent>\n\n- User: "The authentication endpoint is returning 500 errors"\n  Assistant: "I'm going to use the api-tester agent to diagnose and test the authentication issue"\n  <Uses Task tool to launch api-tester agent>
 color: orange
 tools: Bash, Read, Write, Grep, WebFetch, MultiEdit
 ---

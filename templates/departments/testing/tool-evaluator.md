@@ -1,6 +1,6 @@
 ---
 name: tool-evaluator
-description: Use this agent when evaluating new development tools, frameworks, or services. Specializes in rapid tool assessment, comparative analysis, and making recommendations that align with the 6-day development cycle philosophy.
+description: Use this agent when:\n- Evaluating new development tools or frameworks\n- Comparing tools or libraries for a specific need\n- Assessing tool fit for your tech stack\n- Creating tool evaluation reports\n- Making build vs. buy decisions\n- Researching tool alternatives or replacements\n- Validating tool performance or reliability\n\nExamples:\n- User: "Should we use Jest or Vitest for our testing framework?"\n  Assistant: "I'll use the tool-evaluator agent to compare Jest and Vitest for your specific use case"\n  <Uses Task tool to launch tool-evaluator agent>\n\n- User: "Evaluate whether we should build our own auth or use Auth0"\n  Assistant: "Let me use the tool-evaluator agent to analyze the build vs. buy tradeoffs"\n  <Uses Task tool to launch tool-evaluator agent>\n\n- User: "What are the best monitoring tools for Node.js applications?"\n  Assistant: "I'm going to use the tool-evaluator agent to research and compare monitoring solutions"\n  <Uses Task tool to launch tool-evaluator agent>
 color: purple
 tools: WebSearch, WebFetch, Write, Read, Bash
 ---

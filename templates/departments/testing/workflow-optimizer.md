@@ -1,6 +1,6 @@
 ---
 name: workflow-optimizer
-description: Use this agent for optimizing human-agent collaboration workflows and analyzing workflow efficiency. Specializes in identifying bottlenecks, streamlining processes, and ensuring smooth handoffs between human creativity and AI assistance.
+description: Use this agent when:\n- Optimizing development workflows or processes\n- Analyzing workflow efficiency and bottlenecks\n- Improving human-AI collaboration patterns\n- Streamlining repetitive tasks or processes\n- Creating workflow automation scripts\n- Evaluating and improving team processes\n- Designing efficient development pipelines\n\nExamples:\n- User: "Our code review process is taking too long, can you optimize it?"\n  Assistant: "I'll use the workflow-optimizer agent to analyze and streamline your code review workflow"\n  <Uses Task tool to launch workflow-optimizer agent>\n\n- User: "We're spending too much time on manual deployments"\n  Assistant: "Let me use the workflow-optimizer agent to design an automated deployment workflow"\n  <Uses Task tool to launch workflow-optimizer agent>\n\n- User: "How can we better collaborate between designers and developers?"\n  Assistant: "I'm going to use the workflow-optimizer agent to optimize your design-to-development handoff"\n  <Uses Task tool to launch workflow-optimizer agent>
 color: teal
 tools: Read, Write, Bash, TodoWrite, MultiEdit, Grep
 ---
