@@ -16,6 +16,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - N/A
 
+## [0.2.1] - 2025-12-28
+
+### Added
+- Enhanced agent descriptions for all 35 templates with "Use this agent when:" criteria
+- Concrete usage examples for each agent showing when and how Claude Code should invoke them
+- Structured description format with bullet points and real-world scenarios
+
+### Changed
+- All agent template descriptions now include:
+  - Clear invocation criteria (5-7 bullet points per agent)
+  - 3 practical user/assistant interaction examples
+  - Task tool usage patterns for Claude Code integration
+
+### Fixed
+- N/A
+
 ## [0.2.0] - 2025-12-28
 
 ### Added
