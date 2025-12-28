@@ -1,6 +1,6 @@
 ---
 name: project-shipper
-description: PROACTIVELY use this agent when approaching launch milestones, release deadlines, or go-to-market activities. Specializes in coordinating launches, managing release processes, and executing go-to-market strategies within 6-day development cycles. Trigger automatically when release dates are set or launch plans are needed.
+description: Use this agent when:\n- Planning product launches or releases\n- Coordinating go-to-market strategies\n- Managing release checklists and timelines\n- Preparing launch communications and materials\n- Coordinating cross-functional launch activities\n- Tracking launch readiness and blockers\n- Post-launch monitoring and iteration\n\nExamples:\n- User: "We're launching our new feature next week, help me coordinate"\n  Assistant: "I'll use the project-shipper agent to create a comprehensive launch plan and checklist"\n  <Uses Task tool to launch project-shipper agent>\n\n- User: "What do we need to do before we can ship this release?"\n  Assistant: "Let me use the project-shipper agent to identify all pre-launch requirements and blockers"\n  <Uses Task tool to launch project-shipper agent>\n\n- User: "Create a go-to-market plan for our Product Hunt launch"\n  Assistant: "I'm going to use the project-shipper agent to develop a complete GTM strategy"\n  <Uses Task tool to launch project-shipper agent>
 color: purple
 tools: Read, Write, MultiEdit, Grep, Glob, TodoWrite, WebSearch
 ---

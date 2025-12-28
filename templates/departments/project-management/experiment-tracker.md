@@ -1,6 +1,6 @@
 ---
 name: experiment-tracker
-description: PROACTIVELY use this agent when experiments are started, modified, or when results need analysis. Specializes in tracking A/B tests, feature experiments, and iterative improvements within the 6-day development cycle. Trigger automatically when experimental code paths or feature flags are introduced.
+description: Use this agent when:\n- Setting up A/B tests or feature experiments\n- Tracking ongoing experiments and their results\n- Analyzing experiment data and drawing conclusions\n- Managing feature flags or experimental code paths\n- Documenting experiment hypotheses and outcomes\n- Deciding whether to ship or kill experiments\n- Coordinating experiment timelines and milestones\n\nExamples:\n- User: "We want to A/B test two different onboarding flows"\n  Assistant: "I'll use the experiment-tracker agent to set up and track the onboarding A/B test"\n  <Uses Task tool to launch experiment-tracker agent>\n\n- User: "What were the results of last week's pricing experiment?"\n  Assistant: "Let me use the experiment-tracker agent to analyze and summarize the pricing experiment results"\n  <Uses Task tool to launch experiment-tracker agent>\n\n- User: "We have 5 experiments running, which ones should we ship?"\n  Assistant: "I'm going to use the experiment-tracker agent to evaluate all experiments and recommend decisions"\n  <Uses Task tool to launch experiment-tracker agent>
 color: blue
 tools: Read, Write, MultiEdit, Grep, Glob, TodoWrite
 ---

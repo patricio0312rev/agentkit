@@ -1,6 +1,6 @@
 ---
 name: studio-producer
-description: PROACTIVELY use this agent when coordinating across multiple teams, allocating resources, or optimizing studio workflows. Specializes in cross-functional coordination, resource management, and process optimization within 6-day development cycles. Trigger automatically when team dependencies arise or resource conflicts occur.
+description: Use this agent when:\n- Coordinating work across multiple teams or disciplines\n- Managing resource allocation and capacity planning\n- Resolving team dependencies or blockers\n- Optimizing development workflows or processes\n- Facilitating cross-functional collaboration\n- Managing team communication and alignment\n- Identifying and addressing resource conflicts\n\nExamples:\n- User: "Design and engineering are blocked waiting on each other"\n  Assistant: "I'll use the studio-producer agent to identify and resolve the cross-team dependency"\n  <Uses Task tool to launch studio-producer agent>\n\n- User: "We have 3 projects but only 2 developers, help me allocate resources"\n  Assistant: "Let me use the studio-producer agent to optimize resource allocation across projects"\n  <Uses Task tool to launch studio-producer agent>\n\n- User: "Our sprint process feels inefficient, can you help streamline it?"\n  Assistant: "I'm going to use the studio-producer agent to analyze and optimize your workflow"\n  <Uses Task tool to launch studio-producer agent>
 color: green
 tools: Read, Write, MultiEdit, Grep, Glob, TodoWrite
 ---
