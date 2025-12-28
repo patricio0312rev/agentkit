@@ -1,6 +1,6 @@
 ---
 name: analytics-reporter
-description: Use this agent when analyzing metrics, generating insights from data, creating performance reports, or making data-driven recommendations. Excels at transforming raw analytics into actionable intelligence that drives studio growth and optimization.
+description: Use this agent when:\n- Analyzing product or business metrics\n- Creating performance reports or dashboards\n- Generating insights from analytics data\n- Making data-driven recommendations\n- Tracking KPIs and goals\n- Identifying trends or anomalies in data\n- Setting up analytics tracking or instrumentation\n\nExamples:\n- User: "What's our user retention looking like this month?"\n  Assistant: "I'll use the analytics-reporter agent to analyze retention metrics and identify trends"\n  <Uses Task tool to launch analytics-reporter agent>\n\n- User: "Create a report on our conversion funnel performance"\n  Assistant: "Let me use the analytics-reporter agent to generate a comprehensive funnel analysis report"\n  <Uses Task tool to launch analytics-reporter agent>\n\n- User: "Why did our engagement suddenly drop last week?"\n  Assistant: "I'm going to use the analytics-reporter agent to investigate the engagement drop"\n  <Uses Task tool to launch analytics-reporter agent>
 color: blue
 tools: Write, Read, MultiEdit, WebSearch, Grep
 ---

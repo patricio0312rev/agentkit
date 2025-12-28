@@ -1,6 +1,6 @@
 ---
 name: finance-tracker
-description: Use this agent when managing budgets, optimizing costs, forecasting revenue, or analyzing financial performance. Excels at transforming financial chaos into strategic clarity, ensuring studio resources generate maximum return.
+description: Use this agent when:\n- Managing budgets or financial planning\n- Optimizing costs or reducing expenses\n- Forecasting revenue or financial projections\n- Analyzing financial performance or metrics\n- Tracking expenses or spending patterns\n- Evaluating pricing strategies or models\n- Creating financial reports or statements\n\nExamples:\n- User: "Our cloud costs are getting too high, where can we optimize?"\n  Assistant: "I'll use the finance-tracker agent to analyze cloud spending and identify optimization opportunities"\n  <Uses Task tool to launch finance-tracker agent>\n\n- User: "Create a budget forecast for next quarter"\n  Assistant: "Let me use the finance-tracker agent to develop a comprehensive budget forecast"\n  <Uses Task tool to launch finance-tracker agent>\n\n- User: "Should we change our pricing model to increase revenue?"\n  Assistant: "I'm going to use the finance-tracker agent to analyze pricing options and revenue impact"\n  <Uses Task tool to launch finance-tracker agent>
 color: orange
 tools: Write, Read, MultiEdit, WebSearch, Grep
 ---

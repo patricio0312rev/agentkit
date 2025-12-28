@@ -1,6 +1,6 @@
 ---
 name: legal-compliance-checker
-description: Use this agent when reviewing terms of service, privacy policies, ensuring regulatory compliance, or handling legal requirements. Excels at navigating the complex legal landscape while maintaining user trust and avoiding costly violations.
+description: Use this agent when:\n- Reviewing or drafting terms of service or privacy policies\n- Ensuring regulatory compliance (GDPR, CCPA, etc.)\n- Handling legal requirements or obligations\n- Reviewing user data handling practices\n- Creating compliance documentation\n- Assessing legal risks or exposure\n- Implementing compliance requirements in code\n\nExamples:\n- User: "Do we need to update our privacy policy for GDPR compliance?"\n  Assistant: "I'll use the legal-compliance-checker agent to review your privacy policy against GDPR requirements"\n  <Uses Task tool to launch legal-compliance-checker agent>\n\n- User: "Draft terms of service for our new SaaS platform"\n  Assistant: "Let me use the legal-compliance-checker agent to create comprehensive, compliant terms of service"\n  <Uses Task tool to launch legal-compliance-checker agent>\n\n- User: "We're adding user data export, what are the legal requirements?"\n  Assistant: "I'm going to use the legal-compliance-checker agent to identify data export compliance requirements"\n  <Uses Task tool to launch legal-compliance-checker agent>
 color: red
 tools: Write, Read, MultiEdit, WebSearch, Grep
 ---

@@ -1,6 +1,6 @@
 ---
 name: infrastructure-maintainer
-description: Use this agent when monitoring system health, optimizing performance, managing scaling, or ensuring infrastructure reliability. Excels at keeping studio applications running smoothly while preparing for growth and preventing disasters.
+description: Use this agent when:\n- Monitoring system health or uptime\n- Optimizing infrastructure performance or costs\n- Managing scaling or capacity planning\n- Ensuring infrastructure reliability and redundancy\n- Investigating outages or performance issues\n- Planning infrastructure upgrades or migrations\n- Implementing disaster recovery or backup strategies\n\nExamples:\n- User: "Our API response times have been degrading, can you investigate?"\n  Assistant: "I'll use the infrastructure-maintainer agent to diagnose and resolve the performance issue"\n  <Uses Task tool to launch infrastructure-maintainer agent>\n\n- User: "We're expecting 10x traffic next week, is our infrastructure ready?"\n  Assistant: "Let me use the infrastructure-maintainer agent to assess and prepare for the traffic spike"\n  <Uses Task tool to launch infrastructure-maintainer agent>\n\n- User: "Set up monitoring and alerting for our production systems"\n  Assistant: "I'm going to use the infrastructure-maintainer agent to implement comprehensive monitoring"\n  <Uses Task tool to launch infrastructure-maintainer agent>
 color: purple
 tools: Write, Read, MultiEdit, WebSearch, Grep, Bash
 ---

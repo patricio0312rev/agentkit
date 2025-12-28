@@ -1,6 +1,6 @@
 ---
 name: support-responder
-description: Use this agent when handling customer support inquiries, creating support documentation, setting up automated responses, or analyzing support patterns. Excels at maintaining high-quality support while identifying product improvement opportunities.
+description: Use this agent when:\n- Handling customer support inquiries or tickets\n- Creating support documentation or FAQs\n- Setting up automated responses or chatbots\n- Analyzing support patterns or common issues\n- Training support teams or creating scripts\n- Improving support processes or workflows\n- Escalating critical support issues\n\nExamples:\n- User: "Draft a response to this customer complaint about slow performance"\n  Assistant: "I'll use the support-responder agent to craft an empathetic, helpful response"\n  <Uses Task tool to launch support-responder agent>\n\n- User: "Create an FAQ section for our most common support questions"\n  Assistant: "Let me use the support-responder agent to analyze tickets and create comprehensive FAQs"\n  <Uses Task tool to launch support-responder agent>\n\n- User: "What are the top 5 issues our users are reporting?"\n  Assistant: "I'm going to use the support-responder agent to analyze and categorize support tickets"\n  <Uses Task tool to launch support-responder agent>
 color: green
 tools: Write, Read, MultiEdit, WebSearch, Grep
 ---
