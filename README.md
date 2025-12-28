@@ -213,6 +213,7 @@ All agents are designed to be:
 | -------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------- |
 | `-t, --tool <tool>`        | AI tool to generate configuration for               | `claude-code`, `cursor`, `copilot`, `aider`, `universal`                                                 | `cursor`                             | ✅ (with `--skip-prompts`) |
 | `-f, --folder <name>`      | Custom folder name for agent files                  | Any valid folder name (no spaces or slashes)                                                             | Tool-specific default\*              | ❌                         |
+| `-m, --model <model>`      | Model for Claude Code agents                        | `sonnet`, `opus`, `haiku`, `inherit`                                                                     | `sonnet`                             | ❌                         |
 | `-d, --departments <list>` | Comma-separated list of departments to include      | `design`, `engineering`, `marketing`, `product`, `project-management`, `studio-operations`, `testing`    | -                                    | ✅ (with `--skip-prompts`) |
 | `--agents <list>`          | Comma-separated list of specific agents to include  | See [agent list](#-available-departments--agents) above. Format: `agent-name` or `department/agent-name` | All agents from selected departments | ❌                         |
 | `--skip-prompts`           | Skip all interactive prompts (non-interactive mode) | -                                                                                                        | `false`                              | ❌                         |
@@ -263,6 +264,16 @@ agentkit init \
   --tool claude-code \
   --folder .my-agents \
   --departments engineering,marketing,testing \
+  --skip-prompts
+```
+
+**Claude Code with specific model:**
+
+```bash
+agentkit init \
+  --tool claude-code \
+  --model opus \
+  --departments engineering,design \
   --skip-prompts
 ```
 
