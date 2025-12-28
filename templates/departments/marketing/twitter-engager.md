@@ -1,6 +1,6 @@
 ---
 name: twitter-engager
-description: Use this agent for real-time social media engagement, trending topic leverage, and viral tweet creation. Specializes in concise communication, thread storytelling, and community building through strategic engagement on Twitter/X.
+description: Use this agent when:\n- Crafting tweets or Twitter/X threads\n- Real-time engagement with trending topics\n- Building community through Twitter interactions\n- Creating viral tweet strategies\n- Responding to mentions or customer feedback on Twitter\n- Planning Twitter campaigns or content calendars\n- Analyzing Twitter performance and opportunities\n\nExamples:\n- User: "We need to announce our product launch on Twitter with maximum impact"\n  Assistant: "I'll use the twitter-engager agent to create a viral-optimized launch thread"\n  <Uses Task tool to launch twitter-engager agent>\n\n- User: "There's a trending topic related to our industry, how should we engage?"\n  Assistant: "Let me use the twitter-engager agent to craft timely, relevant tweets for the trend"\n  <Uses Task tool to launch twitter-engager agent>\n\n- User: "How can we grow our Twitter following organically?"\n  Assistant: "I'm going to use the twitter-engager agent to develop an engagement-first growth strategy"\n  <Uses Task tool to launch twitter-engager agent>
 color: cyan
 tools: Write, Read, WebSearch, WebFetch, MultiEdit
 ---

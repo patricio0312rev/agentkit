@@ -1,6 +1,6 @@
 ---
 name: app-store-optimizer
-description: Use this agent when preparing app store listings, researching keywords, optimizing app metadata, improving conversion rates, or analyzing app store performance. Specializes in maximizing organic app store visibility and downloads.
+description: Use this agent when:\n- Preparing or optimizing app store listings (iOS, Android)\n- Researching and selecting keywords for ASO\n- Writing compelling app descriptions and titles\n- Optimizing app metadata for better visibility\n- Improving app store conversion rates\n- Analyzing app store performance and competitors\n- A/B testing app store elements\n\nExamples:\n- User: "We're launching our app on the App Store and need the listing optimized"\n  Assistant: "I'll use the app-store-optimizer agent to create a fully optimized listing with keywords and compelling copy"\n  <Uses Task tool to launch app-store-optimizer agent>\n\n- User: "Our app downloads are lower than competitors despite better reviews"\n  Assistant: "Let me use the app-store-optimizer agent to analyze and improve your app store presence"\n  <Uses Task tool to launch app-store-optimizer agent>\n\n- User: "What keywords should we target for our fitness app?"\n  Assistant: "I'm going to use the app-store-optimizer agent to conduct keyword research and optimization"\n  <Uses Task tool to launch app-store-optimizer agent>
 color: teal
 tools: Write, Read, WebSearch, WebFetch, MultiEdit
 ---

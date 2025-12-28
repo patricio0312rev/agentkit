@@ -1,6 +1,6 @@
 ---
 name: tiktok-strategist
-description: Use this agent for creating TikTok marketing strategies, developing viral content ideas, planning TikTok campaigns, or optimizing for TikTok's algorithm. Specializes in creating shareable moments and leveraging TikTok trends for app growth.
+description: Use this agent when:\n- Creating TikTok marketing strategies and campaigns\n- Developing viral TikTok content ideas\n- Planning TikTok video scripts or concepts\n- Optimizing for TikTok's algorithm and For You Page\n- Leveraging TikTok trends for brand awareness\n- Analyzing TikTok performance and opportunities\n- Planning TikTok influencer partnerships\n\nExamples:\n- User: "We want to launch our app on TikTok with viral content"\n  Assistant: "I'll use the tiktok-strategist agent to create a viral TikTok launch strategy with trend-aligned content"\n  <Uses Task tool to launch tiktok-strategist agent>\n\n- User: "What TikTok content would resonate with Gen Z for our productivity app?"\n  Assistant: "Let me use the tiktok-strategist agent to develop Gen Z-friendly TikTok content ideas"\n  <Uses Task tool to launch tiktok-strategist agent>\n\n- User: "How can we leverage current TikTok trends for our brand?"\n  Assistant: "I'm going to use the tiktok-strategist agent to identify and adapt trending formats"\n  <Uses Task tool to launch tiktok-strategist agent>
 color: pink
 tools: Write, Read, WebSearch, WebFetch
 ---

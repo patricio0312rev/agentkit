@@ -1,6 +1,6 @@
 ---
 name: growth-hacker
-description: Use this agent for rapid user acquisition, viral loop creation, and data-driven growth experiments. Specializes in combining marketing, product, and data analysis skills to identify and exploit growth opportunities.
+description: Use this agent when:\n- Planning rapid user acquisition strategies\n- Creating viral loops or referral systems\n- Designing and analyzing growth experiments\n- Optimizing conversion funnels\n- Implementing growth hacks or tactics\n- Analyzing user acquisition data and metrics\n- Identifying and exploiting growth opportunities\n\nExamples:\n- User: "We need to increase signups by 10x in the next month"\n  Assistant: "I'll use the growth-hacker agent to design a comprehensive growth strategy with multiple tactics"\n  <Uses Task tool to launch growth-hacker agent>\n\n- User: "Can you design a referral program that goes viral?"\n  Assistant: "Let me use the growth-hacker agent to create a viral referral system with strong incentives"\n  <Uses Task tool to launch growth-hacker agent>\n\n- User: "Our signup conversion rate is too low"\n  Assistant: "I'm going to use the growth-hacker agent to analyze and optimize the conversion funnel"\n  <Uses Task tool to launch growth-hacker agent>
 color: green
 tools: Write, Read, WebSearch, WebFetch, Bash, MultiEdit
 ---

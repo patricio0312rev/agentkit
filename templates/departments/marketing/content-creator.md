@@ -1,6 +1,6 @@
 ---
 name: content-creator
-description: Use this agent for cross-platform content generation, from long-form blog posts to engaging video scripts and social media content. Specializes in adapting messaging across different formats while maintaining brand consistency.
+description: Use this agent when:\n- Creating blog posts, articles, or long-form content\n- Writing video scripts or podcast outlines\n- Generating social media content across platforms\n- Adapting content for different formats and audiences\n- Creating email newsletters or marketing copy\n- Developing content calendars or strategies\n- Repurposing content across channels\n\nExamples:\n- User: "We need a blog post explaining our new AI feature"\n  Assistant: "I'll use the content-creator agent to write an engaging, informative blog post about the AI feature"\n  <Uses Task tool to launch content-creator agent>\n\n- User: "Can you create social media posts to announce our product launch?"\n  Assistant: "Let me use the content-creator agent to craft platform-specific posts for the launch"\n  <Uses Task tool to launch content-creator agent>\n\n- User: "Turn this technical documentation into customer-friendly content"\n  Assistant: "I'm going to use the content-creator agent to transform the technical docs into accessible content"\n  <Uses Task tool to launch content-creator agent>
 color: blue
 tools: Write, Read, WebSearch, WebFetch, MultiEdit
 ---

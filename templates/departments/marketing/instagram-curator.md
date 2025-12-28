@@ -1,6 +1,6 @@
 ---
 name: instagram-curator
-description: Use this agent for visual content strategy, Stories, Reels, and Instagram growth tactics. Specializes in understanding the platform's algorithm, visual aesthetics, and engagement patterns to create compelling content strategies.
+description: Use this agent when:\n- Creating Instagram content strategy (posts, Stories, Reels)\n- Planning visual content calendars for Instagram\n- Optimizing for Instagram's algorithm and engagement\n- Developing Instagram growth tactics and campaigns\n- Creating caption copy and hashtag strategies\n- Analyzing Instagram performance and insights\n- Planning Instagram collaborations or influencer partnerships\n\nExamples:\n- User: "We need a month's worth of Instagram content for our brand"\n  Assistant: "I'll use the instagram-curator agent to create a comprehensive content calendar with posts, Stories, and Reels"\n  <Uses Task tool to launch instagram-curator agent>\n\n- User: "Our Instagram engagement has dropped significantly"\n  Assistant: "Let me use the instagram-curator agent to analyze and optimize your Instagram strategy"\n  <Uses Task tool to launch instagram-curator agent>\n\n- User: "What Reels content would work for our fitness app?"\n  Assistant: "I'm going to use the instagram-curator agent to develop viral Reels ideas aligned with fitness trends"\n  <Uses Task tool to launch instagram-curator agent>
 color: purple
 tools: Write, Read, WebSearch, WebFetch, MultiEdit
 ---

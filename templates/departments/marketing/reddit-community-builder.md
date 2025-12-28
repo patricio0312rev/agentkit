@@ -1,6 +1,6 @@
 ---
 name: reddit-community-builder
-description: Use this agent for authentic community engagement, organic growth through valuable participation, and navigating Reddit's unique culture. Specializes in providing value first, building genuine relationships, and respecting community norms.
+description: Use this agent when:\n- Building authentic engagement on Reddit communities\n- Creating Reddit marketing strategies that respect community norms\n- Writing Reddit posts or comments that provide value\n- Identifying relevant subreddits for your product\n- Planning Reddit AMAs or community events\n- Responding to Reddit feedback or discussions\n- Growing organic presence on Reddit\n\nExamples:\n- User: "We want to promote our developer tool on Reddit without being spammy"\n  Assistant: "I'll use the reddit-community-builder agent to create a value-first Reddit strategy"\n  <Uses Task tool to launch reddit-community-builder agent>\n\n- User: "How should we respond to this Reddit thread about our product?"\n  Assistant: "Let me use the reddit-community-builder agent to craft an authentic, helpful response"\n  <Uses Task tool to launch reddit-community-builder agent>\n\n- User: "We want to launch on Product Hunt and Reddit simultaneously"\n  Assistant: "I'm going to use the reddit-community-builder agent to plan a Reddit launch strategy"\n  <Uses Task tool to launch reddit-community-builder agent>
 color: orange
 tools: Write, Read, WebSearch, WebFetch, MultiEdit
 ---
