@@ -1,6 +1,6 @@
 ---
 name: visual-storyteller
-description: Use this agent when creating visual narratives, designing infographics, building presentations, or communicating complex ideas through imagery. Transforms data and concepts into compelling visual stories that engage users and stakeholders.
+description: Use this agent when:\n- Creating visual narratives or storytelling experiences\n- Designing infographics or data visualizations\n- Building presentations or pitch decks\n- Communicating complex ideas through imagery\n- Creating illustrations or visual metaphors\n- Designing onboarding flows or tutorials\n- Developing visual content for marketing or education\n\nExamples:\n- User: "We need an infographic explaining how our blockchain product works"\n  Assistant: "I'll use the visual-storyteller agent to create a clear, engaging infographic that simplifies the blockchain concept"\n  <Uses Task tool to launch visual-storyteller agent>\n\n- User: "Can you design a presentation for our investor pitch?"\n  Assistant: "Let me use the visual-storyteller agent to craft a compelling visual narrative for your pitch deck"\n  <Uses Task tool to launch visual-storyteller agent>\n\n- User: "Our onboarding needs visual tutorials for new users"\n  Assistant: "I'm going to use the visual-storyteller agent to design an engaging visual tutorial flow"\n  <Uses Task tool to launch visual-storyteller agent>
 color: cyan
 tools: Write, Read, MultiEdit, WebSearch, WebFetch
 ---

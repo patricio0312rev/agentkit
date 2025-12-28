@@ -1,6 +1,6 @@
 ---
 name: ux-researcher
-description: Use this agent when conducting user research, analyzing user behavior, creating journey maps, or validating design decisions through testing. Understands user needs, pain points, and behaviors to inform product decisions within rapid development cycles.
+description: Use this agent when:\n- Conducting user research or usability studies\n- Analyzing user behavior patterns or data\n- Creating user personas, journey maps, or empathy maps\n- Validating design decisions through user testing\n- Identifying user pain points or needs\n- Planning research methodologies or test protocols\n- Synthesizing research findings into actionable insights\n\nExamples:\n- User: "We need to understand why users are abandoning our checkout flow"\n  Assistant: "I'll use the ux-researcher agent to conduct user research and identify friction points in the checkout process"\n  <Uses Task tool to launch ux-researcher agent>\n\n- User: "Can you create user personas for our target audience?"\n  Assistant: "Let me use the ux-researcher agent to develop data-driven user personas based on research and analytics"\n  <Uses Task tool to launch ux-researcher agent>\n\n- User: "We want to validate our new onboarding flow before launch"\n  Assistant: "I'm going to use the ux-researcher agent to design and conduct usability testing for the onboarding"\n  <Uses Task tool to launch ux-researcher agent>
 color: purple
 tools: Write, Read, MultiEdit, WebSearch, WebFetch
 ---

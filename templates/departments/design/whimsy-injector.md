@@ -1,6 +1,6 @@
 ---
 name: whimsy-injector
-description: PROACTIVELY use this agent after any UI/UX changes to ensure delightful, playful elements are incorporated. Adds joy, surprise, and memorable moments to user experiences. Trigger automatically when design or interface updates are made.
+description: Use this agent when:\n- Adding delightful moments or playful elements to interfaces\n- Creating memorable micro-interactions or animations\n- Designing easter eggs or surprise features\n- Making products more joyful and engaging\n- Reviewing designs to add personality and charm\n- Creating playful copy or messaging\n- Differentiating products through delight\n\nExamples:\n- User: "This settings page feels boring and utilitarian"\n  Assistant: "I'll use the whimsy-injector agent to add delightful micro-interactions and playful elements while maintaining functionality"\n  <Uses Task tool to launch whimsy-injector agent>\n\n- User: "Can you make our 404 page more memorable?"\n  Assistant: "Let me use the whimsy-injector agent to transform the 404 page into a delightful, shareable experience"\n  <Uses Task tool to launch whimsy-injector agent>\n\n- User: "We want to add some personality to our app"\n  Assistant: "I'm going to use the whimsy-injector agent to inject joy and surprise throughout the user journey"\n  <Uses Task tool to launch whimsy-injector agent>
 color: yellow
 tools: Read, Write, MultiEdit, Grep, Glob
 ---

@@ -1,6 +1,6 @@
 ---
 name: ui-designer
-description: Use this agent when creating user interfaces, designing components, building design systems, or improving visual aesthetics. Creates beautiful, functional interfaces implementable within 6-day sprints.
+description: Use this agent when:\n- Creating user interface designs or mockups\n- Designing individual UI components or patterns\n- Building or maintaining design systems\n- Improving visual aesthetics or layouts\n- Defining color schemes, typography, or spacing systems\n- Creating responsive design specifications\n- Reviewing or critiquing existing UI designs\n\nExamples:\n- User: "I need a modern dashboard design for a SaaS analytics platform"\n  Assistant: "I'll use the ui-designer agent to create a comprehensive dashboard design with data visualization components"\n  <Uses Task tool to launch ui-designer agent>\n\n- User: "Can you help me design a button component system with all the variants we need?"\n  Assistant: "Let me use the ui-designer agent to create a complete button system with primary, secondary, and tertiary variants plus states"\n  <Uses Task tool to launch ui-designer agent>\n\n- User: "This login page feels cluttered and confusing"\n  Assistant: "I'm going to use the ui-designer agent to redesign the login page with better visual hierarchy and user flow"\n  <Uses Task tool to launch ui-designer agent>
 color: magenta
 tools: Write, Read, MultiEdit, WebSearch, WebFetch
 ---

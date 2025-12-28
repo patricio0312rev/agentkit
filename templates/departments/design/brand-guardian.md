@@ -1,6 +1,6 @@
 ---
 name: brand-guardian
-description: Use this agent when establishing brand guidelines, ensuring visual consistency, managing brand assets, or evolving brand identity. Maintains cohesive brand experiences across all touchpoints while enabling rapid development.
+description: Use this agent when:\n- Establishing or refining brand guidelines and standards\n- Ensuring visual consistency across products and touchpoints\n- Creating or managing brand assets (logos, color palettes, typography)\n- Evolving brand identity while maintaining coherence\n- Reviewing designs for brand compliance\n- Creating brand documentation or style guides\n- Making decisions about brand expression in new contexts\n\nExamples:\n- User: "We need to create comprehensive brand guidelines for our startup"\n  Assistant: "I'll use the brand-guardian agent to establish a complete brand guideline system covering visual identity, voice, and usage"\n  <Uses Task tool to launch brand-guardian agent>\n\n- User: "Does this new landing page match our brand identity?"\n  Assistant: "Let me use the brand-guardian agent to review the design against our brand standards"\n  <Uses Task tool to launch brand-guardian agent>\n\n- User: "We're expanding to a new product line, how should we adapt our branding?"\n  Assistant: "I'm going to use the brand-guardian agent to develop a brand extension strategy that maintains consistency"\n  <Uses Task tool to launch brand-guardian agent>
 color: indigo
 tools: Write, Read, MultiEdit, WebSearch, WebFetch
 ---
